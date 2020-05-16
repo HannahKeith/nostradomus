@@ -4,7 +4,7 @@
 // $(() => {
 
 
-// $('.button').on('click', event => {
+
 
 
 //After my syntax didn't work over and over, I followed NASA's how to guide on using thier APOD API and came up with the following
@@ -31,8 +31,8 @@
          .appendTo('.ball')
          .attr({
                    'src': pic1,
-                   'width': '300px',
-                   'height': '300px'
+                   // 'width': '300px',
+                   // 'height': 'auto'
                })
                // console.log($seePOD);
         }
@@ -41,11 +41,6 @@
         }});
 
         request.send(null);
-
-
-
-
-
 
 
 //   url: link,
@@ -74,13 +69,35 @@
 //
 //   //ends event listener
 // })
-//
-//
-//
-//
-//
-//
 
 
-  //Ends DOR
-// })
+
+
+//Starts DOR
+$(() => {
+
+
+
+let modal = $('#simpleModal')
+let modalBtn = $('#modalBtn')
+let closeBtn = $('.closeBtn')
+
+modalBtn.on('click', (event) => {
+   $('.modal').css('display','block')
+   // console.log('test');
+})
+
+
+closeBtn.on('click', (event) => {
+    // console.log('test');
+  modal.css('display','none')
+})
+
+
+
+
+
+
+
+//Ends DOR
+})
