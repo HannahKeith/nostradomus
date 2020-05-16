@@ -31,6 +31,7 @@
          .appendTo('.ball')
          .attr({
                    'src': pic1,
+                   "id": 'portal'
                    // 'width': '300px',
                    // 'height': 'auto'
                })

@@ -1,4 +1,7 @@
 
+
+
+
 .container1 {
   /* background-image:url('nostradamus.jpeg'); */
   height: 1000px;
@@ -14,49 +17,29 @@
   height: 60%;
   position: absolute;
   margin:auto;
-  top:0;
-  bottom:0;
-  left:0;
-  right:0;
   background-color: black;
-  /* border-radius: 100%; */
-  /* background-color: rgba(0,0,0,0); */
+
 
 }
 
 
-img {
+#portal {
   border-radius: 50%;
-    max-width: 100%;
-    max-height: 100%;
-    position: absolute;
-    margin:auto;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+
+
     }
 
-/* .ball {
-  height: 1000px;
-  background-image:url('nostradamus.jpeg');
+.head{
+  height: 400px;
+  background-image: url("nostradamus_header.png");
   background-size: cover;
-  background-repeat:no-repeat;
-  border radius:
-} */
+  background-repeat: no-repeat;
+    }
 
-/* img {
-  border-radius: 50%;
-} */
 
-  /* position:relative;
-  max-width:50%;
-  max-height:150%;
-  margin-top:50%;
-  margin-left:50%; */
-  /* width:550px;
-  height: 550px;
-} */
 
 .button {
   background: pink;
@@ -82,7 +65,7 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.5);
   overflow: auto;
 }
 
