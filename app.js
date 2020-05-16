@@ -9,6 +9,8 @@
 
 //After my syntax didn't work over and over, I followed NASA's how to guide on using thier APOD API and came up with the following
 
+
+
   let link = 'https://api.nasa.gov/planetary/apod'
   let apiKey = 'u30450EZhSB5gNYDejP5YVoukIFOMmSExXtvCNbC'
 
@@ -22,14 +24,28 @@
 
       let response = JSON.parse(request.responseText);
         // console.log(response);
+        //This part I figured out using jquery documentation on creating an img element
       let pic1 = response.hdurl;
         console.log(pic1);
+        $seePOD = $('<img>')
+         .appendTo('.ball')
+         .attr({
+                   'src': pic1,
+                   'width': '300px',
+                   'height': '300px'
+               })
+               // console.log($seePOD);
         }
         else {
              console.log("Error in network request: " + request.statusText);
         }});
 
         request.send(null);
+
+
+
+
+
 
 
 //   url: link,
