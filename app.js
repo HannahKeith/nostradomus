@@ -1,44 +1,70 @@
-console.log('We have liftoff!');
+// console.log('We have liftoff!');
 
 
-$(() => {
+// $(() => {
 
 
-$('#start button').on('click',(event) => {
+// $('.button').on('click', event => {
 
 
-$.ajax({
-  url: 'https://eonet.sci.gsfc.nasa.gov/api/v2.1/events',
-  type: 'GET',
-  data: {
-    '$limit': 5
-  }
+//After my syntax didn't work over and over, I followed NASA's how to guide on using thier APOD API and came up with the following
+
+  let link = 'https://api.nasa.gov/planetary/apod'
+  let apiKey = 'u30450EZhSB5gNYDejP5YVoukIFOMmSExXtvCNbC'
+
+  let request = new XMLHttpRequest();
+
+			request.open('GET', link + '?api_key=' + apiKey, true);
+
+      request.addEventListener('load',function(){
+
+      if(request.status >= 200 && request.status < 400){
+
+      let response = JSON.parse(request.responseText);
+        // console.log(response);
+      let pic1 = response.hdurl;
+        console.log(pic1);
+        }
+        else {
+             console.log("Error in network request: " + request.statusText);
+        }});
+
+        request.send(null);
 
 
-})
-  .done (
-    (data) => {
-      let $body = $('body')
-      for (let i = 0; i < data.length; i++){
-        $seeEvent = $('<h2>')
-          .text(data[i].events.title)
-          .appendTo($body)
-          console.log('test');
-      }
-    }
-
-  )
-
-
-  //ends event listener
-})
-
-
-
-
-
-
+//   url: link,
+//   type: 'GET',
+//   // data: {
+//   //   '$limit': 1
+//   // }
+//
+// })
+//
+//   .then ((image) => {
+//       // console.log(image);
+//
+//
+//       for (let i = 0; i < image.length; i++){
+//         // console.log(event);
+//         $seePic = $('<img>'.hd)
+//           // .text(data[i].hd)
+//           .addClass('boom')
+//           .appendTo($body)
+//           console.log($seePic);
+//         }
+//       }
+//   )
+//
+//
+//   //ends event listener
+// })
+//
+//
+//
+//
+//
+//
 
 
   //Ends DOR
-})
+// })
