@@ -1,63 +1,49 @@
 
 
-body {
-  height: 100%;
-  width: 100%;
-}
-
 .head{
-  height: 500px;
   display: flex;
   align-content: center;
-  width: auto;
+  height: 600px;
+
+  /* width: auto; */
   background-image: url("nostradamus_header.png");
   background-size: cover;
   background-repeat: no-repeat;
-    }
+  }
+
 h2 {
   color: lime;
   font-size: 100px;
+  padding-left: 25%
 }
 
 .container1 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: 1000px;
-  /* width: 100% */
-  /* background-size: auto; */
+  height: 100%;
   background-color: black;
+}
 
-
-  /* display: flex; */
+.btnDiv {
+  display: flex;
+  margin-bottom: 3%;
+  justify-content: center;
 }
 
 .ball {
-  padding-top: 5%;
   display: flex;
   justify-content: center;
-  width: 60%;
-  height: 600px;;
-  position: absolute;
-  margin:auto;
+  width: 100%;
+  height: 100%;
   background-color: black;
-
-
 }
-
 
 #portal {
   border-radius: 50%;
   max-width: 100%;
   max-height: 100%;
-  /* padding-left: 20%; */
-
-
-
-    }
-
-
-
-
+  }
 
 .button {
   background: pink;
@@ -66,8 +52,13 @@ h2 {
   border-radius: 25px;
   font-size: 16px;
   height: 50px;
-  margin-top: 50px;
-  margin-left: 50px;
+  width: 300px;
+}
+
+#quoteBtn {
+  max-width: 50%;
+  align-content: center;
+
 }
 
 .button:hover{
@@ -113,6 +104,9 @@ h2 {
   cursor: pointer;
 }
 .container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: white;
   height: 300px;
 }
