@@ -85,18 +85,21 @@ let closeBtn = $('.closeBtn');
 
 
 
-modalBtn.on('click', (event) => {
-  // randomGenerator() {
-  //   return Math.floor(Math.random() * predictions.length)
-  // };
-  // generatePrediction() {
-  //   console.log(`Nostra-DOM-us says ${this.predictions[this.randomNumGenerator(this.predictions)]} + ${this.predictions[this.randomNumGenerator(this.predictions)]} + ${this.predictions[this.randomNumGenerator(this.predictions)]}`);
-  // }
-   $('.modal').css('display','block')
-   $oracle = $('<p>')
-    .text()
 
-});
+
+const randomNumGenerator = () => {
+    return Math.floor(Math.random() * predictions.length)
+  };
+
+const generatePrediction = () => {
+      $('.modal').css('display','block')
+      $('.modal-text').text('');
+      let $oracle = $('<p>')
+      .text(`Nostra-DOM-us says ${predictions[randomNumGenerator()]}  ${predictions[randomNumGenerator()]}  ${predictions[randomNumGenerator()]}`)
+      .appendTo($('.modal-text'))
+};
+
+modalBtn.on('click', generatePrediction)
 
 closeBtn.on('click', (event) => {
     // console.log('test');
