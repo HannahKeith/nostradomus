@@ -1,8 +1,12 @@
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+</style> */
 
 
 .head{
   display: flex;
   align-content: center;
+  flex-direction: column;
   height: 700px;
 
   /* width: auto; */
@@ -13,10 +17,23 @@
   background-repeat: no-repeat;
   }
 
+
+
 h2 {
-  color: lime;
+  color: #ca2c92;
   font-size: 100px;
-  padding-left: 25%
+  padding-left: 20%;
+  word-wrap: break-word;
+  text-shadow: 4px 4px 20px #ff77ff,4px 4px 12px black;
+  /* font-family: 'Atomic Age'; */
+}
+
+h3{
+  color: #ca2c92;
+  font-size: 50px;
+  padding-left: 35%;
+  word-wrap: break-word;
+  text-shadow: 4px 4px 12px #ff77ff,4px 4px 12px black;
 }
 
 .container1 {
@@ -45,6 +62,7 @@ h2 {
   border-radius: 50%;
   max-width: 100%;
   max-height: 100%;
+
   }
 
 .button {
@@ -55,11 +73,13 @@ h2 {
   font-size: 16px;
   height: 50px;
   width: 300px;
+  box-shadow: 4px 4px 12px #ff77ff,4px 4px 12px white;
 }
 
 #quoteBtn {
   max-width: 50%;
   align-content: center;
+  margin-top: 30px;
 
 }
 
