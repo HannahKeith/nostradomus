@@ -26,8 +26,7 @@
          .attr({
                    'src': pic1,
                    "id": 'portal'
-                   // 'width': '300px',
-                   // 'height': 'auto'
+
                })
                // console.log($seePOD);
         }
@@ -66,17 +65,12 @@
 // })
 
 
-// const randomNumGenerator(predictions) {
-//   return Math.floor(Math.random() * predictions.length)
-// }
-
 //Starts DOR
 $(() => {
 
 
-
   let predictions = [
-    'the young lion will overcome the older one', 'two wounds made one, then he dies a cruel death', 'on the field of combat in a single battle', 'the ancient lady will fall from her high place', 'burnt through lightening of twenty threes the six', 'chants and demands', 'these will in the future by headless idiots', 'be received as divine prayers', 'this is when the moon completes her great cycle', 'his fame will increase towards the realm of the east'
+    'the young lion will overcome the older one, ', 'two wounds made one , then he dies a cruel death, ', 'on the field of combat in a single battle, ', 'the ancient lady will fall from her high place, ', 'burnt through lightening of twenty threes the six, ', 'chants and demands, ', 'these will in the future by headless idiots, ', 'be received as divine prayers, ', 'this is when the moon completes her great cycle, ', 'his fame will increase towards the realm of the east, '
   ];
 
 let modal = $('#simpleModal');
@@ -94,10 +88,13 @@ const randomNumGenerator = () => {
 const generatePrediction = () => {
       $('.modal').css('display','block')
       $('.modal-text').text('');
-      let $oracle = $('<p>')
-      .text(`Nostra-DOM-us says ${predictions[randomNumGenerator()]}  ${predictions[randomNumGenerator()]}  ${predictions[randomNumGenerator()]}`)
+      let $oracle = $('<div>')
+      .text(`Nostra-DOM-us says: ${predictions[randomNumGenerator()]}   ${predictions[randomNumGenerator()]}   ${predictions[randomNumGenerator()]}`)
       .appendTo($('.modal-text'))
+
 };
+
+
 
 modalBtn.on('click', generatePrediction)
 
@@ -107,30 +104,12 @@ closeBtn.on('click', (event) => {
 
 });
 
-$('#quoteBtn').on('click', () => {
-
-  // randomGenerator() {
-  //   return Math.floor(Math.random() * predictions.length)
-  // };
-
-  // generatePrediction() {
-  //   console.log(`Nostra-DOM-us says ${this.predictions[this.randomNumGenerator(this.predictions)]} + ${this.predictions[this.randomNumGenerator(this.predictions)]} + ${this.predictions[this.randomNumGenerator(this.predictions)]}`);
-  // }
-})
 
 
 
 
 
-//
 
-
-
-
-// const randomNumGenerator(predictions) {
-//   return Math.floor(Math.random() * predictions.length)
-// }
-//
 
 
 
